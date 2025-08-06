@@ -75,3 +75,34 @@ git push -u origin main
 git pull origin main --allow-unrelated-histories
 git push origin main
 git push origin main --force
+clear 
+ls
+vi jenkinsfile 
+git status
+git pull https://github.com/Muralidhar302/my-node-app.git
+ls -a
+ls
+clear
+git add jenkinsfile 
+git commit -m "added jenkinsfile"
+git add .
+git commit -m "added jenkinsfile"
+git push
+git push --set-upstream origin main
+clear
+# 1. Update packages
+sudo apt update
+# 2. Install Docker
+sudo apt install -y docker.io
+# 3. Enable & start Docker
+sudo systemctl enable docker
+sudo systemctl start docker
+# 4. Add Jenkins user to docker group
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+# Check if docker works for jenkins
+sudo su - jenkins
+ls
+vi jenkinsfile 
+sudo su - jenkins
+ls
